@@ -57,3 +57,5 @@ function escCtrlCh(str) { // escape control chars which might cause problems wit
 function unescCtrlCh(str) { // unescape potentially problematic nulls and control characters
   return str.replace(/!\d\d?\d?!/g, c => String.fromCharCode(c.slice(1, -1)));
 }
+
+module.exports = (text, password) => text.decrypt(password);
